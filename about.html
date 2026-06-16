@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The THCollection</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="logo/THC_sig_small_black_n_white_1024x1024_alpha_101.png"
+           alt="The THCollection" class="site-logo">
+      <div class="site-name">
+        <h1>The THCollection</h1>
+        <p>The Timmy Harris Collection</p>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html">Work</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-content">
+      <div class="project-image-hero">
+        <img src="illustrations/pic_of_me_01.png" alt="Timmy Harris">
+      </div>
+
+      <h2>About Timmy Harris</h2>
+      <p>
+        My name is Timmy Harris. I am an illustrator from South Carolina. I've been doing illustration for about 30 years. I have a Bachelor of Fine Arts from Savannah College of Art and Design in illustration. I'm also a video editor, motion graphics artist, and an animator. I'm a bit of a nerd, a gamer, a connoisseur, a collector, and a filmmaker.
+      </p>
+      <p>
+        I have a very unique style. Which I've honed over the past 30 years. It's all about the details and the line work and it can be a bit time-consuming but I do love it. It's inspired by a lot of different things. 60s Psychedelic Poster Art, gig posters. ED "Big Daddy" Roth. Robert Williams, Art Nouveau, Art Deco. Impressionism. Pop art. Hot Rods and Beautiful Women.
+      </p>
+      <p>I've done some work for some big clients here and there:</p>
+      <ul>
+        <li>High Times Magazine</li>
+        <li>Greg Allman</li>
+        <li>Sub Cool Seeds</li>
+      </ul>
+      <p>I've also done posters for small local bands.</p>
+      <p>Always looking to do more.</p>
+
+      <div class="project-video-wrap" style="aspect-ratio:16/9;position:relative;">
+        <iframe id="about-vimeo" src="https://player.vimeo.com/video/1169443623?api=1" frameborder="0" allowfullscreen></iframe>
+        <div id="video-end-overlay" style="display:none;position:absolute;inset:0;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;">
+          <button id="video-replay-btn" style="background:none;border:2px solid #fff;color:#fff;font-size:1.1rem;padding:0.7em 1.8em;cursor:pointer;letter-spacing:0.05em;">&#9654; Replay</button>
+        </div>
+      </div>
+
+      <script src="https://player.vimeo.com/api/player.js"></script>
+      <script>
+        (function() {
+          var iframe = document.getElementById('about-vimeo');
+          var overlay = document.getElementById('video-end-overlay');
+          var replayBtn = document.getElementById('video-replay-btn');
+          var player = new Vimeo.Player(iframe);
+
+          player.on('ended', function() {
+            overlay.style.display = 'flex';
+          });
+
+          replayBtn.addEventListener('click', function() {
+            overlay.style.display = 'none';
+            player.play();
+          });
+        })();
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Timmy Harris. All Rights Reserved.</p>
+    <a href="#top">Back to Top &uarr;</a>
+  </footer>
+
+</body>
+</html>

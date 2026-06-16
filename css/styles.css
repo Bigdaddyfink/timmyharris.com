@@ -1,0 +1,344 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #111111;
+}
+
+/* ── Header ─────────────────────────── */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.site-name h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.site-name p {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-top: 3px;
+}
+
+/* ── Navigation ──────────────────────── */
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+nav a:hover,
+nav a.active {
+  color: #888888;
+}
+
+/* ── Main / Grid ─────────────────────── */
+
+main {
+  padding: 24px 40px 40px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn-item a {
+  display: block;
+  line-height: 0;
+}
+
+.btn-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* ── Project Pages ───────────────────── */
+
+.project-page {
+  padding: 32px 0 60px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+}
+
+.back-link:hover {
+  color: #888;
+}
+
+.project-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.project-credits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-bottom: 36px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.credit-item {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.credit-item strong {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-image-hero {
+  max-width: 560px;
+}
+
+.project-image-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-image-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.project-image-row.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-image-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-image-caption {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.project-section {
+  margin-top: 48px;
+}
+
+.project-section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.project-subsection {
+  margin-top: 32px;
+}
+
+.project-subsection-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.project-video-wrap {
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+}
+
+.project-video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+.project-video-note {
+  max-width: 560px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.project-subsection-note {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #bbb;
+  margin-bottom: 12px;
+}
+
+/* ── Page content (About, Contact) ───── */
+
+.page-content {
+  max-width: 800px;
+  padding: 60px 0;
+}
+
+.page-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.page-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 16px;
+}
+
+.page-content a {
+  color: #111111;
+  text-decoration: underline;
+}
+
+.page-content a:hover {
+  color: #888888;
+}
+
+/* ── Footer ──────────────────────────── */
+
+footer {
+  margin-top: 40px;
+  padding: 20px 40px;
+  border-top: 1px solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #999999;
+}
+
+footer a {
+  color: #999999;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+
+footer a:hover {
+  color: #333333;
+}
+
+/* ── Responsive ──────────────────────── */
+
+@media (max-width: 900px) {
+  header {
+    padding: 16px 24px;
+  }
+  main {
+    padding: 20px 24px 32px;
+  }
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+  main {
+    padding: 16px;
+  }
+  .button-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+}
